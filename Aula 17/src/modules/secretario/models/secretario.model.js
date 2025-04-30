@@ -25,7 +25,7 @@ const SecretarioModel = sequelize.define('SecretarioModel',{
         unique: true,
         allowNull: false,
         validate:{
-            isEmail:{
+            is:{
                 args:/^[a-zA-Z0-9._%+-]+@rn\.senac\.br$/,
                 msg:'E-mail inválido! O e-mail deve pertencer ao domínio rn.senac.br'
             }
