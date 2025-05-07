@@ -39,7 +39,7 @@ class AlunoController {
   static async listarAlunoPorMatricula(req, res) {
     try {
       const matricula = req.params.matricula;
-      const aluno = await AlunoModel.findByPk(matricula);
+      const aluno = await AlunoModel.findByPk({ matricula });
       if (!aluno) {
         return res.status(404).json({ msg: "Aluno não encontrado!" });
       }
